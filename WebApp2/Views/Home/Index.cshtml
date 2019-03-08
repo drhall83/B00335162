@@ -1,0 +1,78 @@
+﻿@model UWofS.CS7.HomeIndexViewModel
+@{
+    ViewData["Title"] = "Employee Details -" + Model.Employees;
+}
+<h2>Employee Details</h2>
+<table class="table">
+    <tr>
+        <th>Employee Id</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Title</th>
+        <th>Title of Courtesy</th>
+        <th>BirthDate</th>
+        <th>HireDate</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>Region</th>
+        <th>Postalcode</th>
+        <th>Country</th>
+        <th>Home Phone</th>
+        <th>Extension</th>
+        <th>Notes</th>
+        <th>Reports To</th>
+
+    </tr>
+    @foreach (var item in @Model.Employees)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TitleOfCourtesy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BirthDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HireDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.City)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Region)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PostalCode)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Country)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HomePhone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Extension)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.ReportsTo)
+            </td>
+        </tr>
+    }
+</table>
